@@ -15,9 +15,9 @@ body
     overflow-y: scroll
     font-size: 14px
     background-color: white
-    color: $extra-grey-color
+    color: black
     height: auto
-    font-family: Solomon Sans Normal
+    font-family: MagistralC
 .left
     overflow: hidden
     float: left
@@ -29,10 +29,226 @@ section
     width: 100%
     height: auto
     position: relative
-.container
-    width: 100%
+h3
+    font-size: 300%
+    font-family: Magistral Bold
+    font-weight: bold
+    text-transform: uppercase
+    padding-left: 15px   
+    color: #243137
+h3:before
+    content: " "
+    width: 69px
+    height: 57px
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: left
+    display: block
+    float: left
+    margin-right: 15px
+.row
     overflow: hidden
+    width: 100%
+    text-align: left
+    position: relative
 
 
 
-@import "app/sass/media"
+.navbar-default
+    background-image: none
+    background: #C3C1C0
+    color: #606060
+    margin-bottom: 0px
+    border: none
+    border-radius: 0px
+.navbar-default .navbar-nav>li>a
+    color: #606060
+    font-family: Magistral Bold
+    text-transform: uppercase
+    padding: 19px 19px
+.navbar-default .navbar-collapse
+    width: 75%
+    float: left
+    text-align: left
+    padding: 0px
+.navbar-default .navbar-nav>li>a:after
+    content: " "
+    width: 1px
+    height: 14px
+    display: block
+    background-color: #606060
+    float: right
+    position: relative
+    left: 19px
+    top: 2.1px
+.header-social-container
+    width: 25%
+    float: left
+    padding: 15px
+    text-align: right
+.header-social-container a
+    background-color: #243137
+    border-radius: 50%
+    display: inline-block
+    color: white
+    padding: 5px
+    width: 30px
+    height: 30px
+    text-align: center
+    margin: 0px 5px
+@media (min-width: 768px)
+    .about .container .row
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        height: 100%
+.about-right-list li:before
+    width: 14px
+    height: 14px
+    display: block
+    float: left
+    padding-right: 5px
+    background-image: url(../img/list-type-image.png)
+    content: " "
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    position: absolute
+    left: -30px
+.about-right-list li
+    position: relative
+    margin: 19px auto
+.about .about-info-container p
+    padding: 10px 40px
+    color: white
+    font-size: 150%
+.about-right-list
+    list-style-type: none
+    position: relative
+    text-align: left
+    color: white
+.about-right-list:before
+    content: " "
+    display: block
+    height: calc(100% - 19px)
+    width: 1px
+    background-color: white
+    left: 17px
+    top: 10px
+    position: absolute
+.about h3:before
+    background-image: url(../img/section-title-img-1.png)
+.about img
+    width: 100%
+    display: block
+    margin-top: 8%
+.about .container
+    background-color: #206051
+.about .container .row .col-md-6:first-child
+    background-color: white
+
+
+
+
+.services h3:before
+    background-image: url(../img/section-title-img-2.png)
+    position: relative
+    top: -15px
+.services
+    padding-top: 8%
+    padding-bottom: 9%
+.services img
+    width: 90%
+.services h4
+    text-align: center
+    border-bottom: 1px solid #206051
+    padding-bottom: 0px
+    display: block
+    width: 91%
+    margin: 10px auto
+.services h4:after
+    width: 1px
+    height: 15px
+    background-color: #206051
+    display: block
+    content: " "
+    position: relative
+    top: 15px
+    left: 50%
+.services .col-md-3
+    padding-top: 10%
+.services h4
+    color: #606060
+    line-height: 1.4
+    text-transform: uppercase
+.services a    
+    text-decoration: none
+    transition: 0.8s
+    border: 1px solid white
+    overflow: hidden
+    display: block
+    padding-bottom: 8%
+.services a:hover
+    border: 1px solid lightgray
+    box-shadow: 0px 0px 10px lightgray
+    transition: 0.8s 
+
+
+
+
+.reviews h3:before
+    background-image: url(../img/section-title-img-3.png)
+.reviews img
+    width: 95px
+    float: left
+    display: block
+    position: relative
+    z-index: 3
+    text-align: center
+.reviews
+    background-image: url(../img/reviews-container-background.png)
+    background-position: left
+    background-size: cover
+    background-repeat: no-repeat
+    height: 100vh
+.reviews h3
+    color: white
+    margin-top: 5%
+.reviews-item-block
+    padding: 18px
+    background-color: #206051
+    color: white
+    min-height: 158px
+    margin-top: 14%
+    border-radius: 15px
+.reviews-item-block h4
+    padding-left: 15px
+    display: inline-block
+    color: #C3C1C0
+    position: relative 
+    padding-bottom: 5px
+.reviews-item-block h4:after
+    content: " "
+    display: block
+    width: 150%
+    height: 1px
+    background-color: #C3C1C0
+    position: absolute
+    right: 0px
+    z-index: 1
+    bottom: -3px
+.reviews-item-block p
+    padding-left: 111px
+    text-align: left
+    font-size: 75%
+    padding-right: 10%
+    line-height: 1.5
+.reviews .container .row:first-child > .col-md-6:nth-child(1) .reviews-item-block:first-child
+    border-top-left-radius: 50%
+    @import "app/sass/media"
+
+
+
+
+    

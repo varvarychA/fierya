@@ -33,7 +33,8 @@ gulp.task('scripts', function() {
 		'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
 		'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
 		'app/libs/slick-carousel/slick/slick.min.js', // Плагин слайдера Slick
-		'app/libs/animate/wow.min.js' // Дополнение к Animate.css для анимации при прокрутке
+		'app/libs/animate/wow.min.js', // Дополнение к Animate.css для анимации при прокрутке
+		'app/libs/bootstrap3/dist/js/bootstrap.js' // Bootstrap3
 		])
 		.pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
 		.pipe(uglify()) // Сжимаем JS файл

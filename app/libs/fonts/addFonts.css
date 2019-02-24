@@ -1,21 +1,14 @@
 @font-face {
-    font-family: "Bebas Neue Bold";
-    src: url("../fonts/BebasNeueBold.otf") format("opentype");
-    src: url("../fonts/BebasNeueBold.eot") format("embedded-opentype"),
-         url("../fonts/BebasNeueBold.ttf") format("truetype"),
-         url("../fonts/BebasNeueBold.woff") format("woff");
+    font-family: "Magistral Bold";
+    src: url("../fonts/Magistral-Bold.otf") format("opentype");
+    src: url("../fonts/Magistral-Bold.eot") format("embedded-opentype"),
+         url("../fonts/Magistral-Bold.ttf") format("truetype"),
+         url("../fonts/Magistral-Bold.woff") format("woff");
 }
 @font-face {
-    font-family: "Bebas Neue Book";
-    src: url("../fonts/BebasNeueBook.otf") format("opentype");
-    src: url("../fonts/BebasNeueBook.eot") format("embedded-opentype"),
-         url("../fonts/BebasNeueBook.ttf") format("truetype"),
-         url("../fonts/BebasNeueBook.woff") format("woff");
-}
-@font-face {
-    font-family: "Bebas Neue Light";
-    src: url("../fonts/BebasNeue-Light.otf") format("opentype");
-    src: url("../fonts/BebasNeue-Light.eot") format("embedded-opentype"),
-         url("../fonts/BebasNeue-Light.ttf") format("truetype"),
-         url("../fonts/BebasNeue-Light.woff") format("woff");
+    font-family: "MagistralC";
+    src: url("../fonts/MagistralC.otf") format("opentype");
+    src: url("../fonts/MagistralC.eot") format("embedded-opentype"),
+         url("../fonts/MagistralC.ttf") format("truetype"),
+         url("../fonts/MagistralC.woff") format("woff");
 }

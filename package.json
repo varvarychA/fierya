@@ -23,6 +23,8 @@
     "imagemin-pngquant": "^6.0.1"
   },
   "dependencies": {
+    "bootstrap": "^3.4.1",
+    "bower": "^1.8.8",
     "normalize.css": "^8.0.1"
   }
 }
