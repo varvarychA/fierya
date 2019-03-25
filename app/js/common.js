@@ -67,3 +67,40 @@ $('.dmk-menu-main li').click(function(){
         $('.dmk-menu-main').slideUp(400);
 });
 /*-----    ------*/
+
+
+$( document ).ready(function() {
+    $('.trigger').on('click', function() {
+       $('.modal-wrapper.start').toggleClass('open');
+      $('.page-wrapper.q').toggleClass('blur-it');
+       return false;
+    });
+  });
+  $( document ).ready(function() {
+    $('.trigger1').on('click', function() {
+       $('.modal-wrapper.1str').toggleClass('open');
+      $('.page-wrapper.w').toggleClass('blur-it');
+       return false;
+    });
+  });
+  $( document ).ready(function() {
+    $('.trigger2').on('click', function() {
+       $('.modal-wrapper.2str').toggleClass('open');
+      $('.page-wrapper.e').toggleClass('blur-it');
+       return false;
+    });
+  });
+  $( document ).ready(function() {
+    $('.trigger3').on('click', function() {
+       $('.modal-wrapper.3str').toggleClass('open');
+      $('.page-wrapper.r').toggleClass('blur-it');
+       return false;
+    });
+  });
+  $( document ).ready(function() {
+    $('.trigger5').on('click', function() {
+       $('.modal-wrapper.5str').toggleClass('open');
+      $('.page-wrapper.r').toggleClass('blur-it');
+       return false;
+    });
+  });

@@ -72,15 +72,16 @@ h3:before
     text-align: left
     padding: 0px
 .navbar-default .navbar-nav>li>a:after
-    content: " "
+    content: "|"
     width: 1px
     height: 14px
     display: block
-    background-color: #606060
     float: right
     position: relative
     left: 19px
-    top: 2.1px
+
+.navbar-default .navbar-nav>li:nth-child(6)>a:after
+    display: none
 .header-social-container
     width: 25%
     float: left
@@ -109,13 +110,15 @@ h3:before
     display: block
     float: left
     padding-right: 5px
-    background-image: url(../img/list-type-image.png)
     content: " "
     background-size: contain
     background-position: center
     background-repeat: no-repeat
     position: absolute
     left: -30px
+    border-radius: 50%
+    border: 1px solid white
+    background-color: #206051
 .about-right-list li
     position: relative
     margin: 19px auto
@@ -123,6 +126,9 @@ h3:before
     padding: 10px 40px
     color: white
     font-size: 150%
+    font-weight: bold
+    line-height: 1
+    text-align: left
 .about-right-list
     list-style-type: none
     position: relative
@@ -162,7 +168,7 @@ h3:before
     width: 90%
 .services h4
     text-align: center
-    border-bottom: 1px solid #206051
+    border-bottom: 1px solid rgb(96, 96, 96)
     padding-bottom: 0px
     display: block
     width: 91%
@@ -170,7 +176,7 @@ h3:before
 .services h4:after
     width: 1px
     height: 15px
-    background-color: #206051
+    background-color: rgb(96, 96, 96)
     display: block
     content: " "
     position: relative
@@ -254,7 +260,7 @@ h3:before
     text-align: left
     font-size: 85%
     padding-right: 5%
-    line-height: 1.5
+    line-height: 1.15
 .reviews-container-number-1 .reviews-item-block
     border-top-left-radius: 89px
 .reviews-container-number-2 .reviews-item-block
@@ -403,30 +409,38 @@ footer .col-md-6
     padding: 7px 0px
     border-radius: 15px
     border: 1px solid white
-    display: flex
-    flex-direction: row
-    justify-content: flex-start
-    align-items: center
     padding-right: 5px
     margin-bottom: 19px
+    transition: 0.7s
+.velvet-about-list li:hover
+    background-color: white
+    text-align: left
+    font-weight: bold
+
 .velvet-about .row
     overflow: visible
 .velvet-about-list li img
     position: relative
     left: -15px
-
-
+.velvet-about-list a
+    color: white
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+.velvet-about-list li:hover a
+    color: #CD076D
 
 .velvet-resnic h3
     background-color: #CD076D
     color: white
     font-size: 150%
     line-height: 1.5
-    padding: 15px 19px
+    padding: 25px 19px
     border-top-right-radius: 9px
     border-bottom-right-radius: 9px
     display: inline-block
-    width: 100%
+    width: 91%
 .velvet-resnic .col-md-3
     display: flex
     flex-direction: column
@@ -445,7 +459,7 @@ footer .col-md-6
 .velvet-resnic-list li
     padding: 7px 19px
     border-radius: 15px
-    border: 2.5px solid #CD076D
+    border: 1px solid #CD076D
     display: flex
     flex-direction: row
     justify-content: flex-start
@@ -453,6 +467,7 @@ footer .col-md-6
     padding-right: 15%
     margin-bottom: 9%
     position: relative
+    width: 90%
 .velvet-resnic-list li:before
     content: " "
     width: 25px
@@ -532,6 +547,23 @@ footer .col-md-6
     margin-top: 0px
 .velvet-steps .row .col-md-3:nth-child(3) img
     margin-top: 0px      
+.velvet-steps .col-md-3:hover:before
+    display: block
+    width: 100%
+    height: 100%
+    color: white
+    background: #c3c1c0
+    transition: 0.7s
+    padding: 15px
+.velvet-steps .col-md-3:nth-child(1):hover:before
+    content: "Происходит визуальное преображение: реснички фиксируют изгиб, визуально удлиняются, закрепляют цвет, блеск и объем."
+.velvet-steps .col-md-3:nth-child(2):hover:before
+    content: "Это волшебный состав - grow activator. Активируются спящие луковицы, восстанавливаются и стимулируются волосяные фолликулы."
+.velvet-steps .col-md-3:nth-child(3):hover:before
+    content: "Молекулярная эссенция (VELVET essence) покрывает каждый волосок аминокератиновым комплексом и запечатывает его внутри"
+.velvet-steps .col-md-3:nth-child(4):hover:before
+    content: "Домашний уход (Home oil cocktail), в процессе которого эффект от процедуры усиливается!"
+ 
     
     
     
@@ -638,7 +670,10 @@ footer .col-md-6
     margin: 4.9% auto
 .velvet-botox
     padding-top: 4%
-
+.velvet-modal-block > .modal
+    background-color: #CD076D
+.velvet-botox a
+    color: #CD076D
 
 
 
@@ -652,6 +687,7 @@ footer .col-md-6
     text-align: left
 .velvet-hnas h3
     font-size: 150%
+    line-height: 1.34
 .velvet-hnas img
     height: calc(90vh - 75px)
     display: block
@@ -680,17 +716,20 @@ footer .col-md-6
     min-height: 100vh
     padding: 3% 0px
     margin: 0
+    padding-bottom: 0px
 .velvet-hnas h4
     color: #CD076D
     text-align: center
     position: relative
     left: -4%
     top: 7%
-    line-height: 1.5
+    line-height: 1
 .velvet-hnas h4 span
     font-family: Magistral Bold
     font-size: 135%
     padding-bottom: 19px
+    line-height: 1
+    display: inline-block
 .velvet-hnas a
     position: relative
     left: -4%
@@ -711,7 +750,7 @@ footer .col-md-6
     background-size: cover
     background-position: top right
     background-repeat: no-repeat
-    padding: 14% 0px
+    padding: 14% 1.7%
 .velvet-emb1 h3:before
     background-image: url(../img/emb1-main-header-before.png)
     position: relative
@@ -887,7 +926,12 @@ footer .col-md-6
     background-repeat: no-repeat
     background-size: cover
     background-position: top
-    padding: 10% 0px
+    padding-bottom: 10%
+    padding-top: 5%
+
+
+.hnasf .content
+    padding: 0px
 
 .dmk-start
     padding: 15% 0px
@@ -971,7 +1015,7 @@ footer .col-md-6
     bottom: 0px
     left: 0px
     width: 300%
-    height: 1.4px
+    height: 1px
     background-color: white
 .dmk-change .row
     overflow: visible
@@ -985,11 +1029,10 @@ footer .col-md-6
     position: relative
     top: -3px
 .dmk-services img
-    width: 75%
+    width: 85%
 .dmk-services-right-column-lists
     list-style-type: none
     position: relative
-
     padding-left: 0px
 .dmk-services-right-column-lists li
     margin-bottom: 15px
@@ -1015,7 +1058,7 @@ footer .col-md-6
     position: absolute
     top: 5px
     left: 9.5px
-    width: 1.5px
+    width: 1px
     background-color: #206051
     height: 254px
     z-index: -9
@@ -1025,7 +1068,12 @@ footer .col-md-6
     justify-content: center
     align-items: flex-start
     height: 100vh
-
+.dmk-services h3
+    left: -19%
+    position: relative
+    top: 0px
+.dmk-services .row
+    overflow: visible
     
     
     
@@ -1043,10 +1091,11 @@ footer .col-md-6
     background-repeat: no-repeat
     padding: 10% 0px
 .dmk-how-buy-this p
-    margin-top: 45px
+    margin-top: 15px
     padding-right: 35%
     padding-left: 35px
-
+.dmk-how-buy-this h3
+    margin-bottom: 30px
 
 
 
@@ -1089,16 +1138,19 @@ footer .col-md-6
 
 
 
-.massage-starting-block 
+.massage-starting-block
+    font-family: SolidoPro-Book
     h3
         display: inline-block
         background-color: #206051
         color: white
-        text-transform: uppercase
+        line-height: 1.35
         padding: 25px
         border-radius: 25px
         position: relative
         left: -5%
+        font-family: SolidoPro-Bold
+        text-transform: none
     .col-md-7
         background-image: url(../img/massage-first-block-background.png)
         background-size: contain
@@ -1115,16 +1167,17 @@ footer .col-md-6
         float: left
         position: absolute
         bottom: 0px
-        left: 15px
+        left: 14px
         background-color: lightgray
-        width: 150px
-        height: 14px
+        width: 95px
+        height: 8px
 
 .massage-block-2
     background-image: url(../img/massage-block-2-background.png)
     background-size: cover
     background-repeat: no-repeat
     color: white
+    font-family: SolidoPro-Book
     .col-md-5, .col-md-7
         height: 100vh
         display: flex
@@ -1135,6 +1188,7 @@ footer .col-md-6
         padding: 25px
         h3
             color: white
+            font-family: SolidoPro-Bold
         li
             margin-bottom: 19px
             margin-left: 25px
@@ -1164,7 +1218,7 @@ footer .col-md-6
         background-color: #606060
         color: white
         padding: 15px
-        width: 70%
+        width: 45%
         overflow: hidden
         margin-left: 24px
         margin-bottom: 15px
@@ -1176,11 +1230,13 @@ footer .col-md-6
     color: #206051
     height: 100vh
     overflow: hidden
+    font-family: SolidoPro-Book
     h3
         color: #206051
         padding-left: 0px
         position: relative
         padding-bottom: 15px
+        font-family: SolidoPro-Bold
     .massage-block-3-point
         position: relative
         margin-top: 30px
@@ -1196,7 +1252,7 @@ footer .col-md-6
         display: block
         position: absolute
         top: 0px
-        left: -29px
+        left: -19px
     .massage-block-3-bottom
         display: inline-block
         background-color: #206051
@@ -1212,7 +1268,7 @@ footer .col-md-6
         content: " "
         background-color: #206051
         width: 75px
-        height: 4px
+        height: 2.5px
         float: left
         position: absolute
         left: 0px
@@ -1224,6 +1280,862 @@ footer .col-md-6
                 display: flex
                 flex-direction: column
                 justify-content: center
+
+.masage-video-blocks
+    background-image: url(../img/massage-video-block-background-image.png)
+    background-size: cover
+    background-position: left top
+    background-repeat: no-repeat
+    padding: 5% 0px
+    video
+        width: 75%
+        display: block
+        margin: 0px auto
+        margin-bottom: 8%
+    h3
+        margin: 25px auto
+        padding-bottom: 15px
+        position: relative
+        left: -7% 
+        font-family: SolidoPro-Bold
+        color: #606060
+    h3:before
+        display: none
+    h3:after
+        content: " "
+        display: block
+        width: 89px
+        height: 2.5px
+        background-color: #206051
+        position: absolute
+        left: 15px
+        bottom: 0%
+
+
+
+
+.massages-venoz-drenzh-faces
+    background-color: #206051
+    color: white
+    padding: 7% 0px
+    font-family: SolidoPro-Book
+    h3
+        color: white
+        font-family: SolidoPro-Bold
+    h3:before
+        color: white
+        height: 1px
+        display: none
+    .row
+        overflow: visible
+    .massages-venoz-drenzh-faces-infos
+        position: relative
+        display: inline-block
+        padding: 14px
+        background-color: #606060
+        border-radius: 15px
+        z-index: 3
+        margin: 10px 0px
+    .massages-venoz-drenzh-faces-infos:before
+        width: 1500px
+        content: " "
+        height: 100%
+        right: calc(100% - 8px)
+        background-color: #606060
+        position: absolute
+        top: 0px
+        z-index: 0
+    ul
+        list-style-type: none
+        position: relative
+        color: white
+        li
+            position: relative
+            margin: 15px auto
+            text-align: left
+        li:before
+            content: " "
+            display: block
+            width: 15px
+            height: 15px
+            background-image: url(../img/massage-venoz-left-style-type-image-background.png)
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            position: absolute
+            left: -29px
+            top: 1.7px
+    ul:before
+        display: block
+        content: " "
+        background-color: white
+        width: 1px
+        height: 230px
+        position: absolute
+        left: 18px
+        top: 5px
+    img
+        width: 100%
+        margin: 15% auto
+        padding-left: 4%
+    a
+        display: inline-block
+        padding: 10px 19px
+        text-transform: uppercase
+        border: 1px solid #C3C1C0 
+        color: #C3C1C0 
+        margin-left: 15px
+        border-radius: 9px
+    
+
+
+
+
+
+
+
+
+
+
+.masages-gemolimfodrenazh-section-grids
+    background-image: url(../img/massage-gemolimfodrenazh-block-background-image.png)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    color: white
+    padding: 5% 0px
+    font-family: SolidoPro-Book
+    h3
+        color: white
+        padding-bottom: 15px
+        position: relative
+        text-align: left
+        margin-bottom: 0px
+        font-family: SolidoPro-Bold
+    h3:before
+        display: none
+    h3:after
+        content: " "
+        width: 100%
+        height: 1px
+        background-color: rgba(255,255,255, 0.74)
+        display: block
+        position: absolute
+        bottom: 0px
+        left: 0px
+    ul
+        position: relative
+        list-style-type: none
+        color: white
+        padding-top: 30px
+    ul:before
+        content: " "
+        width: 1px
+        height: 180.9px
+        background-color: rgba(255,255,255, 0.7)
+        display: block
+        position: absolute
+        top: 0px
+        left: 0px
+    li
+        margin-bottom: 15px
+        position: relative
+        color: white
+        text-align: left
+        font-size: 125%
+        line-height: 1
+        margin-top: 15px
+    li:before
+        content: " "
+        width: 30px
+        height: 18px
+        background-image: url(../img/massage-gemolimfodrenazh-block-list-type-style-backgrounds-img.png)
+        display: block
+        position: absolute
+        top: 0px
+        left: -40.1px
+        background-position: center
+        background-size: contain
+        background-repeat: no-repeat
+    .masages-gemolimfodrenazh-section-grids-bottom-info-block
+        margin-top: 75px
+    p
+        margin-bottom: 25px
+        line-height: 1.25
+        text-align: left
+        color: white
+    
+
+
+
+.masssage-orbiskylar-block-sections
+    background-image: url(../img/massage-orbikylayr-blocks-backgrounds-images.png)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    padding: 5% 0px
+    font-family: SolidoPro-Book
+    h3:before
+        display: none
+        padding: 0px
+        margin-left: 0px
+    h3
+        padding-left: 0%
+        text-align: left
+        font-family: SolidoPro-Bold
+        color: #206051
+        padding-bottom: 15px
+        margin-bottom: 15px
+        position: relative
+    h3:after
+        display: block
+        width: 1500px
+        height: 1px
+        background-color: #206051
+        position: absolute
+        content: " "
+        bottom: 0px
+
+    .col-md-8
+        div
+            background-image: url(../img/massage-orbikylayr-blocks-right-column-block-backgrounds.png)
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            padding: 15% 29%
+            *
+                position: relative
+                top: -15px
+                left: -4%
+    .container-fluid, .row, .col-md-8
+        padding: 0px
+        margin: 0px
+        left: 0px
+.glamour-starting
+    background-color: #FF0008 
+    img
+        width: 100%
+    .col-md-4
+        padding: 0px
+        background-image: url(../img/glamour-starting-left-block.png)
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        
+    .col-md-5
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 100vh
+        img
+            width: 143px
+        p
+            padding: 0px 15%
+            margin-top: 45px
+            color: white
+    .row
+        width: 100%
+        div
+            height: calc(100vh - 60px)
+    .col-md-3
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-end
+        padding-right: 0px
+        div
+            height: auto
+            background-color: rgba(192,191,190, 0.64)
+            padding: 25px
+            border-top-left-radius: 25px
+            border-bottom-left-radius: 25px
+            width: 70%
+            padding-right: 0px
+            a
+                color: white
+                margin-bottom: 39px
+                display: inline-block
+                width: 100%
+                border-bottom: 1px solid white
+                padding-bottom: 3px
+                font-weight: bold
+    .container-fluid, .row
+        margin: 0px
+        padding: 0px
+
+.glamour-section2
+    background-color: #C0BFBE
+    padding-bottom: 40px
+    h3:before
+        background-image: url(../img/Glamour-section2-h3.png)
+    h3
+        padding: 5% 0px
+    img
+        //width: 75%
+        height: 530px
+        display: block
+        float: right
+        
+    .col-md-6
+        display: block    
+    .section2-img
+        //width: 100%
+.glamour-section3
+    .sem > div
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        align-items: flex-start
+        padding: 15px
+    h3:before
+        background-image: url(../img/Glamour-section3-row1.png)
+    h4
+        width: 219px
+        background-color: #C0BFBE
+        display: inline-block
+        border-radius: 7px
+        text-align: center
+        padding: 3px 15px
+    p
+        font-size: 11px
+        padding-bottom: 25px
+        position: relative
+    .col-md-3:after, .col3:after, .col6:after
+        content: " "
+        display: block
+        width: 90px
+        height: 1px
+        background-color: black
+        position: absolute
+        left: 0px
+        bottom: 0px
+    img
+        width: 195px
+        display: block
+        margin: 0px auto
+    .col3
+        float: left
+        width: 30%
+        position: relative
+        min-height: 265px
+    .col6
+        width: 40%
+        float: left
+        position: relative
+        min-height: 265px
+    .sem
+        h4
+            width: auto
+    span
+        font-size: 14px
+        display: inline-block
+        border-left: 1px black solid
+        padding-lefT: 15px
+        margin-left: 15px
+    h3
+        font-size: 250%
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        align-items: center
+    .col-md-3
+        min-height: 381px
+    .row
+        margin-top: 45px
+.glamour-section4
+    background-image: url(../img/glamour-education-main-baclground.png)
+    background-size: cover
+    background-position: top left
+    background-repeat: no-repeat
+    padding: 5% 0px
+    h3:before
+        background-image: url(../img/Glamour-section4-row1.png)
+    h3
+        padding: 5% 0px
+    .img-section4
+        width: 100%
+    .p-section4
+        padding-bottom: 80px
+    .button-section4
+        text-align: center
+        border-radius: 10px
+        width: 150px
+        height: 32px
+        margin-left: 150px
+        margin-top: 20px
+        background-color: rgba(192,191,190, 0.64)
+    .glamour-education-mains-link
+        display: inline-block
+        color: white
+        padding: 9px 18px
+        text-align: center
+        text-transform: uppercase
+        background-color: #C0BFBE
+        border-radius: 14px
+    .col-md-6
+        text-align: center
+        p
+            text-align: left
+        
+.glamour-section5
+    background-color: #C0BFBE
+    padding: 5% 0px
+    h3:before
+        background-image: url(../img/Glamour-section5-row1.gif)
+    h3
+        font-weight: 400
+        font-family: MagistralC
+        font-size: 209%
+        text-transform: none
+        span
+            color: #ffffff
+            font-weight: bold
+            font-family: Magistral Bold
+            text-transform: uppercase
+    img
+        width: 100%
+        height: auto
+    h4
+        width: 150px
+        display: inline-block
+        border: 1px solid red
+        border-radius: 15px
+        border-color: red
+        text-align: center
+        padding: 3px 15px
+        color: red
+        margin-left: 103px
+        font-family: Magistral Bold
+        margin-top: 45px 
+    .col-md-6
+        p
+            margin-left: 94px
+            margin-top: 15px
+            img
+                width: 27.5px
+                height: auto
+                margin-right: 5px
+            strong
+                font-family: Magistral Bold
+        .p-col6-section5
+            text-align: center
+            font-weight: bold
+.glamour-section6
+    position: relative
+    padding: 5% 0px
+    text-align: left
+    font-size: 100%
+    h3:before
+        background-image: url(../img/Glamour-section6-img1.png)  
+    h3
+        font-family: MagistralC
+        font-size: 250%
+        text-transform: none
+        position: relative 
+        padding-bottom: 30px
+        margin: 30px 0px
+        span
+            font-family: Magistral Bold
+            text-transform: uppercase 
+    h3:after  
+        content: " "
+        display: block
+        width: 1500px
+        height: 2px
+        background-color: #C0BFBE
+        right: calc(100% - 527px)
+        bottom: 0px
+        position: absolute
+    .content-while
+        text-align: center
+        p
+            text-align: left
+    .content-red
+        background-color: red
+        img
+            width: 100%
+            height: auto
+    .row
+        overflow: visible
+    .container-fluid
+        padding: 0px
+        margin: 0px
+    .col-md-6
+        padding: 0px
+    h4
+        display: inline-block
+        border: 1px solid red
+        border-radius: 15px
+        border-color: red
+        text-align: center
+        padding: 8px 19px
+        color: red
+        margin-left: 31px
+        font-family: Magistral Bold
+        float: left
+        margin-right: 70%
+        strong
+            text-align: left
+    .p-col6-section6
+            text-align: center!important
+            background-color: #C0BFBE
+            display: inline-block
+            border-radius: 15px
+            padding: 8px 9px
+            font-weight: bold
+.glamour-section6:after
+    content: " "
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0px
+    left: calc(50% - 15px)
+    background-color: #FF0008
+    z-index: -1
+.glamour-gray-education
+    background-color: #2C343A
+    color: white
+    h3
+        color: white
+    h3:before
+        background-image: url(../img/glamour-gray-education-header-before.png)
+    .glamour-gray-education-left-inner
+        background-image: url(../img/glamour-gray-education-left-column.png)
+        background-size: cover
+        background-position: top center
+        background-repeat: no-repeat
+        min-height: 634px        
+        padding-right: 29%
+        padding-left: 15%
+        p
+            color: black
+            font-size: 12.5px
+        h4
+            padding-top: 41%
+            color: #FF0008
+            padding-bottom: 3%
+            position: relative
+            font-family: Magistral Bold
+            display: inline-block
+        h4:after
+            content: " "
+            display: block
+            width: 1500px
+            right: 0
+            bottom: 0% 
+            height: 1px
+            background-color:  #FF0008
+            position: absolute
+    img
+        width: 100%
+        display: block
+        height: auto
+        margin-top: 150px
+    .row
+        padding: 5% 0px
+        overflow: visible
+.glamour-after-course
+    background-image: url(../img/glamour-after-courses-background.png)
+    background-size: cover
+    background-position: top left
+    background-repeat: no-repeat
+    padding: 9% 0px
+    h3
+        font-size: 135%
+        color: #FF0008
+        padding-left: 9%
+        line-height: 1.5
+        padding-right: 25%
+    h3:before
+        display: none
+    ul
+        list-style-type: none
+        li
+            margin: 15px
+            position: relative
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            align-items: center
+        li:before
+            content: " "
+            width: 34px
+            position: relative
+            display: block
+            float: left
+            height: 34px
+            background-image: url(../img/glamour-after-courses-lists.png)
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            position: absolute
+            left: -39px
+    .col-md-7
+        padding-left: 9%
+.glamour-courses-format
+    background-color: #C0BFBE
+    padding: 5% 0px
+    text-align: left
+    h3:before
+        background-image: url(../img/glamour-course-format-header-before.png)
+        margin-bottom: 35px
+        overflow: hidden
+    h3
+        font-family: MagistralC
+        font-size: 185%
+        span
+            font-family: Magistral Bold
+    h4
+        color: white
+        padding-left: 31px
+        margin-top: 40px
+        padding-bottom: 9px
+        margin-bottom: 8px
+        position: relative
+        display: inline-block
+        font-size: 170%
+    h4:before
+        display: block
+        width: 100%
+        position: absolute
+        height: 1px
+        background-color: #FF0008
+        bottom: 0px
+        content: " "
+        right: 0px
+    h4:after
+        display: block
+        height: 554px
+        position: absolute
+        width: 1px
+        background-color: #FF0008
+        top: 34px
+        content: " "
+        left: 0px
+    p
+        padding-left: 30px
+    ul
+        list-style-type: none
+        li
+            position: relative
+            margin-top: 15px
+            text-align: left
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            padding-left: 15px
+        li:before
+            content: " "
+            display: block
+            width: 45px
+            height: 19px
+            background-image: url(../img/glamour-courses-format-lists-image.png)
+            background-position: center left
+            background-size: contain
+            background-repeat: no-repeat
+            position: absolute
+            left: -41.5px         
+    img
+        width: 100%
+        display: block
+        text-align: center
+        margin-top: 25%
+.glamour-master-classes
+    background-image: url(../img/glamour-master-classes-image-background.png)
+    background-position: top right
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 5% 0px
+    .col-md-7
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+    .glamour-masters-classes-item
+        width: 100%
+        border: 1.5px solid #FF0008
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        margin-top: 34px
+        overflow: hidden
+        border-radius: 15px
+    .glamour-masters-classes-item:before
+        background-image: url(../img/glamour-master-clasess-lists.png)
+        background-position: center
+        background-repeat: no-repeat
+        background-size: contain
+        display: block
+        position: absolute
+        width: 45px
+        height: 45px
+        left: -14px
+        content: " "
+        z-index: 99999
+    h2
+        font-size: 185%
+        margin: 0px
+        font-family: Magistral Bold
+    .glamour-master-classes-headers
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        overflow: hidden
+        padding-left: 19px
+    .glamour-master-clsses-descriptions
+        background-color: #DDDDDD
+        padding: 19px
+        width: 45%
+        overflow: hidden
+    p
+        margin: 0px
+    .row
+        overflow: visible
+.glamour-resnic-reconstructions
+    background-color: #C0BFBE
+    text-align: left
+    padding: 5% 0px
+    h3:before
+        background-image: url(../img/glamour-resnic-reconstruction-header-before.png)
+    h3
+        font-size: 185%
+        text-align: left
+        font-family: MagistralC
+        margin-bottom: 45px
+        span
+            font-family: Magistral Bold
+    img
+        width: 100%
+    li>img
+        width: 25px
+        position: absolute
+        display: block
+        left: 0px
+    ul
+        list-style-type: none
+        font-size: 100%
+        margin-top: calc(123px + 10.9% )
+        li
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+
+            position: relative
+            margin-top: 38px
+            padding-left: 45px
+.glamour-sertificate-trainers
+    padding: 5% 0
+    h3:before
+        background-image: url(../img/glamour-masters-header-before.png)
+        text-align: center
+        position: absolute
+        left: -45px
+    h3
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        font-family: MagistralC
+        margin-bottom: 49px
+
+        span
+            display: inline-block
+            width: 135%
+            text-align: left    
+            b
+                font-family: Magistral Bold
+                
+        p
+            color: #FF0008
+            font-size: 10.9px
+            margin-top: 7px
+            line-height: 1.5
+    .row
+        overflow: visible
+    img
+        width: 100%
+        height: auto
+        margin-top: 15%
+        display: block
+    ul
+        list-style-type: none
+        position: relative
+        li
+            margin-top: 15px
+        li:before
+            display: block
+            position: absolute
+            background-image: url(../img/glamour-masters-right-lists.png)        
+            content: " "
+            background-size: contain
+            background-position: center
+            bakground-repeat: repeat
+            width: 19px
+            height: 19px
+            left: 5px
+    ul:before
+        content: " "
+        display: block
+        height: 591px
+        width: 1px
+        background-color: #C0BFBE
+        left: 14px
+        position: absolute
+        top: 5px
+.glamour-buys-benefits
+    background-color: #2C343A
+    padding: 5% 0px
+    h3:before
+        background-image: url(../img/glamour-buys-header-before-images.png) 
+    h3
+        color: #C0BFBE
+        font-size: 195%
+        text-transform: none
+    .col-md-6 > img
+        width: 100%
+        margin-top: 15%
+        display: block
+    ul
+        list-style-type: none
+        li
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            align-items: center
+            margin-top: 15px
+            color: #C0BFBE
+            img
+                width: 45px
+                display: block
+                margin-right: 15px
+        li:before
+            content: " "
+            display: block
+            width: 1500px
+            height: 1px
+            background-color: #C0BFBE
+            position: absolute
+            right: calc(100% - 58px)
+    .row
+        overflow: visible           
+.good-job
+    width: 50%
+    text-align: left
+    margin: 0px auto 
+    color: white
+    a
+        font-weight: bold
+        color: white
+        padding: 9px
+        display: inline-block
+        border: 1px solid white
+        margin-top: 35px
+        text-align: center
+
+.modal
+    margin: 0px           
 @import "app/sass/media"
 
 
